@@ -5,7 +5,6 @@
 </p>
 
 <h2>Technologies Used</h2>
-
 <ul>
   <li><b> AWS S3: </b> Stores the image to be analyzed.</li>
   <li><b> AWS Rekognition: </b> Detects labels (objects, scenes, and concepts) in the image.</li>
@@ -13,6 +12,50 @@
   <li><b> Matplotlib: </b> Library for displaying the image and drawing bounding boxes.</li>
   <li><b> Pillow (PIL): </b> Library for image processing in Python.</li>
 </ul>
+<h2>Procedure</h2>
+<ol>
+  <li><strong>Open AWS Account</strong></li>
+  <li><strong>Create an S3 Bucket:</strong>
+    <ul>
+      <li>Create a new S3 bucket where we'll store the images to be analyzed.</li>
+    </ul>
+  </li>
+  <li><strong>Set Up IAM User and Permissions:</strong>
+    <ul>
+      <li>Create an IAM user with permissions to access Amazon Rekognition and S3.</li>
+      <li>Generate access keys for the IAM user.</li>
+    </ul>
+  </li>
+  <li><strong>Install Dependencies:</strong>
+    <ul>
+      <li>Install the necessary Python dependencies using pip.</li>
+    </ul>
+  </li>
+  <li><strong>Write Python Script:</strong>
+    <ul>
+      <li>Write a Python script that utilizes the boto3 library to interact with AWS services.</li>
+      <li>Use the boto3.client('rekognition') method to create a Rekognition client.</li>
+      <li>Write functions to detect labels in images using Rekognition and visualize the results using Matplotlib and Pillow.</li>
+    </ul>
+  </li>
+  <li><strong>Authenticate AWS Credentials:</strong>
+    <ul>
+      <li>Configure AWS credentials in your environment using access keys generated for the IAM user.</li>
+    </ul>
+  </li>
+  <li><strong>Upload Images to S3 Bucket:</strong>
+    <ul>
+      <li>Upload images to the S3 bucket created earlier.</li>
+      <li>Ensure that the images are accessible to the IAM user.</li>
+    </ul>
+  </li>
+  <li><strong>Run the Script:</strong>
+    <ul>
+      <li>Run the Python script and verify that it can successfully detect labels in the images stored in the S3 bucket.</li>
+      <li>Check that the visualization of the detected labels is displayed correctly.</li>
+    </ul>
+  </li>
+</ol>
 
 <h2>Project Outputs</h2>
 <div style="display: flex; justify-content: center; align-items: center;">
